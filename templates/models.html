@@ -1,0 +1,32 @@
+{% extends 'content_base.html' %}
+
+{% block title %}
+Модели машинного и глубокого обучения
+{% endblock %}
+
+{% block content_title %}
+Модели
+{% endblock %}
+
+{% block content_desc %}
+Найдите подходящую предобученную модель для использования в своем проекте. Делитесь своими моделями с сообществом и вдохновляйтесь.
+{% endblock %}
+
+{% block content %}
+<div style="margin-top: 50px">
+	<a class="a-btn" href="load_model">Загрузить новую модель</a>
+</div>
+<p class="title-content">Последние модели</p>
+<div class="posts-div">
+	{% for mlmodel in mlmodels %}
+	<a class="post-div" href="/model/{{ mlmodel.model_id }}">
+		<div>
+			<p style="font-size: 20px; margin: 0px"><b>{{ mlmodel.user_name }}/{{ mlmodel.name }}</b></p>
+			<p>{{ mlmodel.desc[:300] }}...</p>
+			<p style="color: #7C7C7C">{{ mlmodel.framework }}</p>
+			<p style="color: #7C7C7C">{{ (today - mlmodel.date.date()).days }} дней назад</p>
+		</div>
+	</a>
+	{% endfor %}
+</div>
+{% endblock %}

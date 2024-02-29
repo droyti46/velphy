@@ -1,0 +1,29 @@
+{% extends 'content_base.html' %}
+
+{% block title %}
+{% if action == 'load' %}
+Загрузка модели машинного обучения
+{% else %}
+Загрузка модели машинного обучения
+{% endif %}
+{% endblock %}
+
+{% block content_title %}
+{% if action == 'load' %}
+Новая модель {{ current_user.name }}
+{% else %}
+Изменение модели
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<form style="padding-top: 20px;" method="post" enctype="multipart/form-data">
+	<input type="text" name="name" class='input' placeholder="Введите название модели*"><br>
+	<input style="width: 800px" type="text" name="framework" class='input' placeholder="Введите используемый фреймворк для обучения*"><br>
+	<textarea style="height: 600px; width: 800px" name="desc" class='input' placeholder="Введите подробное описание модели (для чего была создана, какую функцию выполлняет)*"></textarea><br>
+	<textarea style="height: 600px; width: 800px" name="instruction" class='input' placeholder="Напишите инструкцию по использованию и внедрению в проект*"></textarea><br>
+	<input type="file" name="model_file" class='a-btn' placeholder="Выберите файл модели*" accept=".rar,.zip,.h5"><br>
+	<p>Файл не должен быть больше 200 МБ</p>
+	<input type="submit" class="send-btn" value="Сохранить">
+</form>
+{% endblock %}

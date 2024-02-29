@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Roboto+Condensed&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+body {
+	font-family: "Rubik", sans-serif;
+	margin: 0px 0px 0px 0px;
+}
+.top-navigation {
+    overflow: hidden;
+    background-color: black;
+    padding: 20px 50px 20px 50px;
+    position: sticky;
+    top: 0;
+}
+.top-navigation-element {
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.7s, color 0.7s;
+}
+.bottom-navigation {
+	background-color: black;
+	padding: 50px 200px 50px 200px;
+}
+#login-btn {
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+#regist-btn {
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+#main-info {
+    background: #1B1B1B url(/static/images/background.jpg) center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+   	padding: 50px 200px 50px 200px;
+}
+#main-title {
+    font-size: 50px;
+    margin: 0px 0px 0px 0px;
+    max-width: 400px;
+}
+#main-desc {
+	margin: 50px 0px 0px 0px;
+	max-width: 600px;
+}
+.info-block{
+	padding: 50px 200px 50px 200px;
+}
+.title {
+    font-size: 50px;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+}
+.desc {
+	margin: 50px 0px 0px 0px;
+	text-align: center;
+}
+.input {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    border-color: #8285CD;
+    margin-top: 20px;
+}
+.a-btn {
+    background-color: black;
+    color: white;
+    border-width: 0px;
+    padding: 10px;
+    border-radius: 9px;
+    margin: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.a-btn:hover {
+    background-color: #303030;
+}
+.send-btn {
+    background-color: #7D82FB;
+    color: white;
+    padding: 15px;
+    border-radius: 7px;
+    border-width: 0px;
+    cursor: pointer;
+}

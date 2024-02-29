@@ -1,0 +1,19 @@
+{% extends 'content_base.html' %}
+
+{% block title %}
+Загрузка датасета
+{% endblock %}
+
+{% block content_title %}
+Новый датасет {{ current_user.name }}
+{% endblock %}
+
+{% block content %}
+<form style="padding-top: 20px;" method="post" enctype="multipart/form-data">
+	<input type="text" name="name" class='input' placeholder="Введите название Датасета*"><br>
+	<textarea style="height: 600px; width: 800px" name="desc" class='input' placeholder="Введите подробное описание датасета (что из себя представляет, какого типа объекты и их факторы, какой вид имеет датасет)*"></textarea><br>
+	<input type="file" name="model_file" class='a-btn' placeholder="Выберите файл датасета*" accept=".rar,.zip"><br>
+	<p>Файл не должен быть больше 200 МБ</p>
+	<input type="submit" class="send-btn" value="Сохранить">
+</form>
+{% endblock %}

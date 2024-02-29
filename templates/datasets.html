@@ -1,0 +1,31 @@
+{% extends 'content_base.html' %}
+
+{% block title %}
+Датасеты для обучения моделей
+{% endblock %}
+
+{% block content_title %}
+Датасеты
+{% endblock %}
+
+{% block content_desc %}
+Найдите готовый датасет для обучения своих моделей и нейросетей. Выкладывайте собранные тобой датасеты.
+{% endblock %}
+
+{% block content %}
+<div style="margin-top: 50px">
+	<a class="a-btn" href="load_dataset">Загрузить новый датасет</a>
+</div>
+<p class="title-content">Последние датасеты</p>
+<div class="posts-div">
+	{% for dataset in datasets %}
+	<a class="post-div" href="/dataset/{{ dataset.ds_id }}">
+		<div>
+			<p style="font-size: 20px; margin: 0px"><b>{{ dataset.user_name }}/{{ dataset.name }}</b></p>
+			<p>{{ dataset.desc[:300] }}...</p>
+			<p style="color: #7C7C7C">{{ (today - dataset.date.date()).days }} дней назад</p>
+		</div>
+	</a>
+	{% endfor %}
+</div>
+{% endblock %}

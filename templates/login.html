@@ -1,0 +1,16 @@
+{% extends 'auth.html' %}
+
+{% block title %}
+Вход
+{% endblock %}
+
+{% block auth %}
+<input type="text" name="name" class='input' placeholder="Введите имя пользователя"><br>
+<input type="password" name="password" class='input' placeholder="Введите пароль"><br>
+{% endblock %}
+
+{% block btn_send %}"Войти"{% endblock %}
+
+{% block already_regist %}
+Еще нет аккаунта? <a href="registration" style="color: white">Зарегистрироваться</a>
+{% endblock %}

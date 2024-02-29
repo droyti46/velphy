@@ -1,0 +1,24 @@
+{% extends 'content_base.html' %}
+
+{% block title %}
+Датасет {{ dataset.user_name }}/{{ dataset.name }}
+{% endblock %}
+
+{% block content_title %}
+{{ dataset.user_name }}/{{ dataset.name }}
+{% endblock %}
+
+{% block content_desc %}
+<p style="white-space: pre-line;">{{dataset.desc}}</p>
+{% endblock %}
+
+{% block content %}
+{% if current_user.name == dataset.user_name %}
+<div style="margin-top: 40px">
+	<a class="a-btn" href="/delete-dataset/{{ dataset.ds_id }}">Удалить датасет</a>
+</div>
+{% endif %}
+<div style="margin-top: 30px">
+	<a class="a-btn" href="/download-dataset/{{ dataset.ds_id }}">Скачать датасет</a>
+</div>
+{% endblock %}

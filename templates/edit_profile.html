@@ -1,0 +1,17 @@
+{% extends 'content_base.html' %}
+
+{% block title %}
+Редактирование профиля {{ current_user.name }}
+{% endblock %}
+
+{% block content_title %}
+Редактирование профиля
+{% endblock %}
+
+{% block content %}
+<form style="padding-top: 20px;" method="post">
+	<input type="text" name="name" class='input' placeholder="Введите имя пользователя*" value="{{ current_user.name }}"><br>
+	<textarea style="height: 600px; width: 800px" name="desc" class='input' placeholder="Введите описание профиля. Оставьте ссылки на соц. сети. Расскажите о вашем опыте в Data Science, ML или AI. Напишите о том, какую должность сейчас занимаете и куда стремитесь. Поделитесь тем, какие печеньки вы любите.">{{ current_user.desc }}</textarea><br>
+	<input type="submit" class="send-btn" value="Сохранить">
+</form>
+{% endblock %}

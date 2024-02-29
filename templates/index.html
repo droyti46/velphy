@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Velphy: сообщество любителей ML</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+	<div class="top-navigation">
+		<a href="/">
+		  <img style="max-height: 30px;" src="/static/images/logo.png"/>
+		</a>
+	    {% if current_user.is_authenticated %}
+	    <a class="top-navigation-element" href="user/{{ current_user.name }}">{{current_user.name}}</a>
+	    {% else %}
+		<a id="regist-btn" href="registration"><b>Регистрация</b></a>
+		<a id="login-btn" href="login"><b>Вход</b></a>
+		<H2 style="float: right; color: white;">|</H2>
+	    {% endif %}
+		<a class="top-navigation-element" href="courses">Курсы</a>
+		<a class="top-navigation-element" href="news">Новости</a>
+		<a class="top-navigation-element" href="datasets">Датасеты</a>
+		<a class="top-navigation-element" href="models">Модели</a>
+	</div>
+	<div id="main-info">
+		<div>
+			<p id="main-title">Velphy — русскоязычное ML сообщество</p>
+			<img style="float: right; max-height: 500px;" src="/static/images/neural_network.png">
+			<p id="main-desc">Объединись с другими специалистами в области машинного обучения, найди подходящий датасет и оставайся в курсе всех новостей, связанных с Data Science.</p>
+			<img style="padding-top: 70px; max-height: 500px;" src="/static/images/computer.png">
+		</div>
+	</div>
+	<div class='info-block'>
+		<img style="float: left; max-height: 300px;" src="/static/images/squares1.png">
+		<p class="title">Развивай свои навыки</p>
+		<p class="desc">Повышай свою квалификацию и становись круче, как специалист</p>
+	</div>
+	<div class='info-block'>
+		<img style="float: right; max-height: 300px;" src="/static/images/squares2.png">
+		<p class="title">Делись своими разработками</p>
+		<p class="desc">Выкладывай свои модели машинного обучения для использования другими людьми</p>
+	</div>
+	<div class='info-block'>
+		<p class="title">Работай над своими проектами</p>
+		<p class="desc">Найди подходящий датасет или модель для интеграции в свое приложение</p>
+	</div>
+	<div class="bottom-navigation">
+		<img style="max-height: 300px;" src="/static/images/neural_network_white.png">
+	</div>
+</body>
+</html>

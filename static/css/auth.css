@@ -1,0 +1,15 @@
+#main-div {
+    background: #1B1B1B url(/static/images/auth_bg.jpg) center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+   	padding: 50px 200px 50px 200px;
+   	height: 1000px;
+}
+#auth-div {
+    width: 400px;
+    height: 600px;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 30px;
+}
